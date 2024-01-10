@@ -54,7 +54,8 @@ class FamilyStructure:
 
     def delete_member(self, id):
         # fill this method and update the return
-        pass
+        self._members = [member for member in self._members if member["id"] != id]
+        return self._members
 
     def get_member(self, id):
         # fill this method and update the return
