@@ -52,6 +52,15 @@ def add_new_member():
     return jsonify(jackson_family.add_member(new_member)), 201
 
 
+@app.route("/member/<int:member_id>", methods=["GET"])
+def get_a_member(member_id):
+    member = jackson_family.get_member(member_id)
+
+    if member is None:
+        return jsonify({"msg": "No se encontró un miembro con el id ingresado"}), 404
+    
+    return jsonify(member), 200
+
 
 # this only runs if `$ python src/app.py` is executed
 if __name__ == '__main__':
