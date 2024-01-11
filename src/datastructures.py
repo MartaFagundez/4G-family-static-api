@@ -16,24 +16,24 @@ class FamilyStructure:
         self._members = [
             {
                 "id": self._generateId(),
-                "first_name": "Lara",
+                "first_name": "John",
                 "last_name": self.last_name,
-                "age": 25,
-                "lucky_numbers": [74, 12, 54]
+                "age": 33,
+                "lucky_numbers": [7, 13, 22]
             }, 
             {
                 "id": self._generateId(),
-                "first_name": "Juan",
+                "first_name": "Janet",
                 "last_name": self.last_name,
-                "age": 34,
-                "lucky_numbers": [101, 25, 47]
+                "age": 35,
+                "lucky_numbers": [10, 14, 3]
             }, 
             {
                 "id": self._generateId(),
-                "first_name": "Ron",
+                "first_name": "Jimmy",
                 "last_name": self.last_name,
-                "age": 40,
-                "lucky_numbers": [33, 3, 13]
+                "age": 5,
+                "lucky_numbers": [1]
             }
         ]
 
@@ -56,6 +56,7 @@ class FamilyStructure:
         # fill this method and update the return
         self._members = [member for member in self._members if member["id"] != id]
         return self._members
+    
 
     def get_member(self, id):
         # fill this method and update the return
